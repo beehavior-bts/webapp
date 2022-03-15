@@ -1,19 +1,17 @@
 <template>
-  <div>
-    <TopBar />
-    <Login />
-    <Nuxt />
-  </div>
+  <div />
 </template>
 
 <script>
-export default {
-  name: 'IndexPage'
-}
+import { defineComponent, onBeforeMount, useRouter } from '@nuxtjs/composition-api'
+
+export default defineComponent({
+  setup() {
+    const router = useRouter()
+    onBeforeMount(() => {
+      router.push('/auth/login')
+    })
+  }
+})
 </script>
 
-<style >
-  body {
-    background: url('@/assets/img/Welcom-Background.svg');
-  }
-</style>

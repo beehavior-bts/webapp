@@ -5,7 +5,7 @@
                     <form action="" @submit.prevent="onSubmit">
                         <input type="text" placeholder="Email" v-model="name" class="form-control">
                         <input type="password" placeholder="Mot de Passe" v-model="password" class="form-control">
-                        <nuxt-link to="welcome/" class="btn">Connexion</nuxt-link>
+                        <nuxt-link to="/panel/welcome/" class="btn">Connexion</nuxt-link>
                     </form>
         </div>
       </div>

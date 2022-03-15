@@ -1,13 +1,14 @@
 <template>
     <div class="sidebar-container">
-        <div class="icon-button">
-           <nuxt-link to="../welcome/" class="btn"> <img width="56" src="@/assets/img/home.svg">Acceuil </nuxt-link>
-           <nuxt-link to="../alertes/" class="btn"> <img width="56" src="@/assets/img/add_alert.svg">Alertes </nuxt-link>
-           <nuxt-link to="../compte/" class="btn"> <img width="56" src="@/assets/img/account_circle.svg">Compte </nuxt-link>
-           <nuxt-link to="../admin/" class="btn"> <img width="56" src="@/assets/img/security.svg">Admin </nuxt-link>
-           <nuxt-link to="../" class="btn-power"><img width="56" src="@/assets/img/power.svg"> Déconnexion </nuxt-link>
-
-        </div>
+      <div class="icon-button">
+          <nuxt-link to="/panel/welcome/" class="btn"> <img width="56" src="@/assets/img/home.svg">Acceuil </nuxt-link>
+          <nuxt-link to="/panel/alertes" class="btn"> <img width="56" src="@/assets/img/add_alert.svg">Alertes </nuxt-link>
+          <nuxt-link to="/panel/compte" class="btn"> <img width="56" src="@/assets/img/account_circle.svg">Compte </nuxt-link>
+          <nuxt-link to="/panel/admin" class="btn"> <img width="56" src="@/assets/img/security.svg">Admin </nuxt-link>
+      </div>
+      <div class="disconnected">
+        <nuxt-link to="/" class="btn-power"><img width="56" src="@/assets/img/power.svg"> Déconnexion </nuxt-link>
+      </div>
     </div>
 </template>
 
@@ -19,20 +20,18 @@ export default {
 
 <style scoped>
 
- body{
-    background:#9FBD94 ;
-  }
-
   .sidebar-container{
     display: flex;
-    position: absolute;
-    width: 431px;
-    height: 995px;
-    right: 0;
-    top: 70px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    gap: 2rem;
 
     background: #434343;
   }
+
   .icon-button{
           /* Auto layout */
     display: flex;
@@ -42,11 +41,7 @@ export default {
     padding: 10px;
     font-family: 'Montserrat';
 
-    position: absolute;
-    width: 299px;
-    height: 358.64px;
-    left: 66px;
-    top: 189px;
+    position: static;
   }
 
   .btn{
@@ -61,8 +56,6 @@ export default {
     position: static;
     width: 279px;
     height: 62.91px;
-    left: 10px;
-    top: 10px;
     border-radius: 10px;
 
     background: #DDDDDD;
@@ -85,7 +78,7 @@ export default {
     align-items: center;
     padding: 33px 26px;
 
-    position: absolute;
+    position: static;
     width: 321px;
     height: 126px;
     top: 550px;
@@ -106,8 +99,6 @@ export default {
     position: static;
     width: 36.12px;
     height: 36.12px;
-    left: 35.69px;
-    top: 13.4px;
 
     font-family: Material Icons;
     font-style: normal;

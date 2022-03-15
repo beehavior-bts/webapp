@@ -1,6 +1,14 @@
 <template>
     <div class="card-body">
-        <div class ="form-box">
+      <div class ="mdp-box">
+          <center2>Changer de mot de passe</center2>
+                      <form action="" @submit.prevent="onSubmit">
+                          <input type="password" placeholder="mot-de-passe" v-model="tel" class="form-mdp">
+                          <input type="password" placeholder="Nouveau mot-de-passe" v-model="tel" class="form-mdp">
+                          <button class="btn2">Appliquer</button>
+                      </form>
+         </div>
+      <div class ="form-box">
           <center>Infos Utilisateur</center>
                       <form action="" @submit.prevent="onSubmit">
                           <input type="text" placeholder="Utilisateur" v-model="name" class="form-user">
@@ -8,15 +16,8 @@
                           <input type="text" placeholder="Email" v-model="name" class="form-user">
                           <button class="btn">Appliquer</button>
                       </form>
-         </div>
-          <div class ="mdp-box">
-          <center2>Changer de mot de passe</center2>
-                      <form action="" @submit.prevent="onSubmit">
-                          <input type="password" placeholder="mot-de-passe" v-model="tel" class="form-mdp">
-                          <input type="password" placeholder="Nouveau mot-de-passe" v-model="tel" class="form-mdp">
-                          <button class="btn">Appliquer</button>
-                      </form>
-         </div>
+        </div>
+
       </div>
 </template>
 <script>
@@ -29,9 +30,16 @@ export default {
 
 /* formulaire */
 
-  body {
-    background-image: url('../assets/img/Welcom-Background.svg');
-  }
+ .card-body{
+   display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    gap: 10rem;
+
+ }
 
  center {
     font-family: 'Montserrat';
@@ -56,15 +64,11 @@ export default {
     color: #FFFFFF;
   }
   .form-box{
-    position: absolute;
-    top: 50%;
-    left: 60%;
-    transform: translateX(-50%) translateY(-50%);
-    text-align: center;
-    width: auto;
-    height: auto;
-    margin: auto;
-    padding: 10px 10px 30px 10px;
+     display: flex;
+    flex-direction: column;
+    width: 20%;
+    height: 50%;
+    gap: 2rem;
 
     background: #FFFFFF;
     box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.25);
@@ -78,15 +82,12 @@ export default {
   }
   .mdp-box{
 
-    position: absolute;
-    top: 50%;
-    left: 30%;
-    transform: translateX(-50%) translateY(-50%);
-    text-align: center;
-    width: auto;
-    height: auto;
-    margin: auto;
-    padding: 10px 10px 30px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 45%;
+    height: 40%;
+    gap: 2rem;
 
     background: #434343;
     box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.25);
@@ -108,6 +109,22 @@ export default {
     font-weight: 600;
     border: none;
   }
+  .btn2{
+
+    text-decoration: none;
+    width: 182px;
+    height: 50px;
+    left: 62.59px;
+    top: 260.46px;
+
+    background: #6BDA68;
+    border-radius: 10px;
+    margin:auto;
+    background-color: #FFC265;
+    font-size: 24px;
+    font-weight: 600;
+    border: none;
+  }
   .form-user{
     text-align: center;
     display: flex;
@@ -116,10 +133,10 @@ export default {
     padding: 15px 15px 15px 15px;
     margin: auto;
 
-    width: 220.73px;
-    height: 50.78px;
-    left: 10.14px;
-    top: 10.14px;
+    width: 220px;
+    height: 50px;
+    left: 10px;
+    top: 10px;
 
     background: #F6F6F6;
     border: 4px solid #000000;
@@ -150,16 +167,18 @@ export default {
     font-size-adjust: 1;
   }
 
-  @media all and (max-width:1024px)
-  {
-    #form-box{
-width:auto;
-    }
+  @media screen and (max-width: 1300px) {
 
-    #form-group{
-            width: auto;
-            text-align: center;
-    }
+    .card-body{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      gap: 10rem;
+ }
+
   }
 
 

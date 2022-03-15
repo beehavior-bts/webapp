@@ -1,8 +1,5 @@
 <template>
-<div>
-  <TopBar />
-  <SideBar />
-</div>
+  <div/>
 </template>
 
 <script>

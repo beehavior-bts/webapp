@@ -1,9 +1,5 @@
 <template>
-  <div>
-    <TopBar />
-    <SideBar />
-    <User />
-  </div>
+  <User />
 </template>
 <script>
 export default {
