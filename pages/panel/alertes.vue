@@ -3,9 +3,27 @@
     <div class="main-content">
       <HiveSelector />
       <AlertEditorBox />
+
       <AlertCard>
-        Humidité inférieur à 18%
+        Humidité supérieure à 15%
       </AlertCard>
+      <AlertCard>
+        Humidité supérieure à 18%
+      </AlertCard>
+      <AlertCard>
+        Température inférieure à 30°C
+      </AlertCard>
+      <AlertCard>
+        Température supérieur à 40°C
+      </AlertCard>
+      <AlertCard>
+        Masse inférieure à 75kg
+      </AlertCard>
+      <AlertCard>
+        Masse supérieure à 120kg
+      </AlertCard>
+
+
     </div>
   </div>
 </template>
