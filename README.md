@@ -19,6 +19,26 @@ $ yarn generate
 
 For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
 
+## Quickstart Raph
+
+```bash
+# Clone ssh repository and move on
+$ git clone git@github.com:beehavior-bts/webapp.git
+$ cd webapp
+
+# Synchronize
+$ git fetch
+
+# Swap to 'raph' branch
+$ git checkout raph
+
+# Install dependencies
+$ yarn install
+
+# Run for test
+$ yarn dev
+```
+
 ## Special Directories
 
 You can create the following extra directories, some of which have special behaviors. Only `pages` is required; you can delete them if you don't want to use their functionality.
