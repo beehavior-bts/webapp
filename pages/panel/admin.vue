@@ -42,4 +42,21 @@
     scrollbar-width: none;
     -ms-overflow-style: none;
   }
+
+  @media screen and (max-width: 900px){
+    .main-content{
+      width: 650px;
+    }
+  }
+
+  @media screen and (max-width: 600px){
+    .main-content{
+      width: 450px;
+    }
+  }
+  @media screen and (max-width: 450px){
+    .main-content{
+      width: 350px;
+    }
+  }
 </style>

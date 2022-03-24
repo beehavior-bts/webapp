@@ -66,19 +66,36 @@ img{
   gap: 1.5rem;
 }
 
-@media screen and (max-width: 1318px){
+ @media screen and (max-width: 900px){
     .box_add_user{
-      width: auto;
+      width: 650px;
     }
-    .input-box{
-      width: auto;
+    input{
+      width: 200px;
     }
-    .main-content{
-      width: auto;
-      height: auto;
+  }
+
+  @media screen and (max-width: 600px){
+    .box_add_user{
+      width: 450px;
     }
-    .main{
-      width: auto;
+     input{
+      width: 100px;
+    }
+  }
+  @media screen and (max-width: 450px){
+    .box_add_user{
+      width: 350px;
+      justify-content:center;
+    }
+     .input-box{
+      width: 250px;
+      gap: 0.25rem;;
+      flex-direction: column;
+      padding: 5px 0 5px 0;
+    }
+    input{
+      width: 180px;
     }
   }
 

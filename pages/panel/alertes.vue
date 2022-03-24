@@ -39,8 +39,8 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translateX(-50%) translateY(-50%);
     margin: auto;
+    transform: translateX(-50%) translateY(-50%);
     width: 850px;
     height: 95%;
     overflow-y: scroll;
@@ -48,10 +48,20 @@
     -ms-overflow-style: none;
   }
 
-  @media screen and (max-width: 1318px){
+  @media screen and (max-width: 900px){
     .main-content{
-      width: auto;
-      height: auto;
+      width: 650px;
+    }
+  }
+
+  @media screen and (max-width: 600px){
+    .main-content{
+      width: 450px;
+    }
+  }
+  @media screen and (max-width: 450px){
+    .main-content{
+      width: 380px;
     }
   }
 </style>

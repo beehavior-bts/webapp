@@ -36,5 +36,12 @@
   margin-bottom: 30px;
 
   }
+
+  @media screen and (max-width: 900px){
+    .list-bar{
+      width: 650px;
+      height: 30px;
+    }
+  }
 </style>
 

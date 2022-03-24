@@ -1,7 +1,7 @@
 <template>
     <div class="sidebar-container">
       <div class="icon-button">
-          <nuxt-link to="/panel/welcome/" class="btn"> <img src="@/assets/img/home.svg">Acceuil </nuxt-link>
+          <nuxt-link to="/panel/welcome/" class="btn"> <img src="@/assets/img/home.svg">Accueil </nuxt-link>
           <nuxt-link to="/panel/alertes" class="btn"> <img src="@/assets/img/add_alert.svg">Alertes </nuxt-link>
           <nuxt-link to="/panel/compte" class="btn"> <img src="@/assets/img/account_circle.svg">Compte </nuxt-link>
           <nuxt-link to="/panel/admin" class="btn"> <img src="@/assets/img/security.svg">Admin </nuxt-link>

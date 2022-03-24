@@ -1,5 +1,5 @@
 <template>
-  <div class="main">
+  <div class="main-box">
     <div class="label">
       <div class="warn-alert">
         <img src="@/assets/img/warning.svg">
@@ -13,7 +13,7 @@
 </template>
 
 <style scoped>
- .main {
+ .main-box{
    display: flex;
    flex-direction: row;
    justify-content: space-between;
@@ -67,15 +67,10 @@
    margin-right: 1.75rem;
  }
 
-@media screen and (max-width: 1318px){
-    .main{
-      width: auto;
-      height: auto;
-    }
-
-    .label{
-      width: auto;
-      height: auto;
+@media screen and (max-width: 900px){
+    .main-box{
+      width: 650px;
+      height: 130px;
     }
   }
 

@@ -32,7 +32,6 @@
 
   width: 100%;
   height: 100px;
-  margin: auto;
 
   background: #434343;
   border-radius: 10px;
@@ -115,11 +114,15 @@ img{
   flex-direction:row ;
   align-items: center;
   justify-content: flex-end;
-  padding: 0 1rem 0 1rem;
   box-sizing: border-box;
+  padding: 0 10px 0 0;
   gap: 1.5rem;
 }
 
-
-
+@media screen and (max-width: 900px){
+    .box_config_alert{
+      width: 650px;
+      height: 100px;
+    }
+  }
 </style>

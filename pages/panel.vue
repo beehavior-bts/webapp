@@ -46,7 +46,7 @@
   width: 25%;
 }
 
-@media screen and (max-width: 1388px) {
+@media screen and (max-width: 1318px) {
   .sidecomp {
     display: none;
   }
@@ -54,5 +54,6 @@
   .main {
     width: 100%;
   }
+
 }
 </style>
