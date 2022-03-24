@@ -47,4 +47,11 @@
     scrollbar-width: none;
     -ms-overflow-style: none;
   }
+
+  @media screen and (max-width: 1318px){
+    .main-content{
+      width: auto;
+      height: auto;
+    }
+  }
 </style>

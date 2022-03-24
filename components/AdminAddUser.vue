@@ -66,6 +66,20 @@ img{
   gap: 1.5rem;
 }
 
-
+@media screen and (max-width: 1318px){
+    .box_add_user{
+      width: auto;
+    }
+    .input-box{
+      width: auto;
+    }
+    .main-content{
+      width: auto;
+      height: auto;
+    }
+    .main{
+      width: auto;
+    }
+  }
 
 </style>

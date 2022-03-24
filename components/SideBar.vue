@@ -1,13 +1,13 @@
 <template>
     <div class="sidebar-container">
       <div class="icon-button">
-          <nuxt-link to="/panel/welcome/" class="btn"> <img width="56" src="@/assets/img/home.svg">Acceuil </nuxt-link>
-          <nuxt-link to="/panel/alertes" class="btn"> <img width="56" src="@/assets/img/add_alert.svg">Alertes </nuxt-link>
-          <nuxt-link to="/panel/compte" class="btn"> <img width="56" src="@/assets/img/account_circle.svg">Compte </nuxt-link>
-          <nuxt-link to="/panel/admin" class="btn"> <img width="56" src="@/assets/img/security.svg">Admin </nuxt-link>
+          <nuxt-link to="/panel/welcome/" class="btn"> <img src="@/assets/img/home.svg">Acceuil </nuxt-link>
+          <nuxt-link to="/panel/alertes" class="btn"> <img src="@/assets/img/add_alert.svg">Alertes </nuxt-link>
+          <nuxt-link to="/panel/compte" class="btn"> <img src="@/assets/img/account_circle.svg">Compte </nuxt-link>
+          <nuxt-link to="/panel/admin" class="btn"> <img src="@/assets/img/security.svg">Admin </nuxt-link>
       </div>
       <div class="disconnected">
-        <nuxt-link to="/" class="btn-power"><img width="56" src="@/assets/img/power.svg"> Déconnexion </nuxt-link>
+        <nuxt-link to="/" class="btn-power"><img src="@/assets/img/power.svg"> Déconnexion </nuxt-link>
       </div>
     </div>
 </template>
@@ -27,10 +27,11 @@ export default {
     align-items: center;
     width: 100%;
     height: 100%;
+    overflow: hidden;
     gap: 2rem;
 
     background: #434343;
-  }
+    }
 
   .icon-button{
           /* Auto layout */
@@ -50,7 +51,7 @@ export default {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 10.4554px 9.50495px 10.4554px 0px;
+    padding: 10px 9px 10px 0px;
     margin:auto;
 
     position: static;
@@ -93,6 +94,8 @@ export default {
     text-decoration: none;
     color: #777373;
   }
+
+
 
   img{
 

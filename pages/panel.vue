@@ -1,7 +1,11 @@
 <template>
-  <div >
-    <TopBar />
+  <div class="mainVue">
+    <div class="topcomp">
+      <TopBar />
+    </div>
+
     <div class="flex-row">
+
       <div class="main">
         <Nuxt />
       </div>
@@ -42,7 +46,7 @@
   width: 25%;
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1388px) {
   .sidecomp {
     display: none;
   }
@@ -50,6 +54,5 @@
   .main {
     width: 100%;
   }
-
 }
 </style>

@@ -66,4 +66,17 @@
  .trash {
    margin-right: 1.75rem;
  }
+
+@media screen and (max-width: 1318px){
+    .main{
+      width: auto;
+      height: auto;
+    }
+
+    .label{
+      width: auto;
+      height: auto;
+    }
+  }
+
 </style>
