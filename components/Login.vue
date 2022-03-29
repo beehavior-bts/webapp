@@ -56,6 +56,9 @@ export default {
   }
   .btn{
 
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-decoration: none;
     width: 182px;
     height: 50px;

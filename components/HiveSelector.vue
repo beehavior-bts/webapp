@@ -38,10 +38,39 @@
   }
 
   @media screen and (max-width: 900px){
-    .list-bar{
-      width: 650px;
+  .list-bar{
+      width: 100%;
       height: 30px;
     }
+    .liste{
+      width: 100%;
+      height: 30px;
+
+    }
   }
+  @media screen and (max-width: 600px){
+    .list-bar{
+      width: 100%;
+      height: 30px;
+    }
+    .liste{
+      width: 100%;
+      height: 30px;
+
+    }
+  }
+
+
+  @media screen and (max-width: 450px){
+    .list-bar{
+        width: 100%;
+        height: 30px;
+      }
+      .liste{
+        width: 100%;
+        height: 30px;
+
+      }
+    }
 </style>
 

@@ -40,9 +40,7 @@
   flex-direction:row ;
   align-items: center;
   justify-content: space-between;
-  padding: 0 1rem 0 1rem;
   box-sizing: border-box;
-  gap: 1.5rem;
   }
 
 .box-button{
@@ -59,9 +57,9 @@
   flex-direction:row ;
   align-items: center;
   justify-content: flex-start;
-  padding: 0 1rem 0 1rem;
   box-sizing: border-box;
-  gap: 1.5rem;
+  gap: 1rem;
+  margin-left: 5px;
 }
 select{
   -webkit-appearance: none;
@@ -69,7 +67,7 @@ select{
   appearance: none;
   border: none;
 
-    width: 151px;
+  width: 151px;
   height: 40px;
 
   background: #F7F7F7;
@@ -82,7 +80,6 @@ select{
 select::after {
   content: "";
 }
-
 
 input{
   -webkit-appearance: none;
@@ -121,8 +118,47 @@ img{
 
 @media screen and (max-width: 900px){
     .box_config_alert{
-      width: 650px;
+      width: 100%;
       height: 100px;
+    }
+
+    input{
+      width: 200px;
+    }
+    select{
+
+
+    }
+  }
+  @media screen and (max-width: 600px){
+    .box_config_alert{
+      width: 100%;
+      height: 100px;
+    }
+    input{
+      width: 100px;
+    }
+    select{
+      width:100px;
+    }
+  }
+  @media screen and (max-width: 450px){
+    .box_config_alert{
+      width: 100%;
+      height: 150px;
+    }
+
+    input{
+      width: 180px;
+    }
+    .select-box{
+      width: 250px;
+      gap: 0.5rem;;
+      flex-direction: column;
+      padding: 5px 0 5px 0;
+    }
+    select{
+      width: 180px;
     }
   }
 </style>

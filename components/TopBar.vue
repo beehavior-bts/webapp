@@ -147,10 +147,6 @@ export default defineComponent({
   left: 0px; /* Decalage du sous-menu par rapport aux liens du menu*/
   z-index: 100; /* Gestion de la superposition des sous-menus par rapport au reste de la page */
 }
-.dropdownmenu ul a {
-  /* Changement de l'affichage des liens des sous-menus pour ne pas les afficher
-                en inline-block comme les liens de menu, ils seront donc verticaux */
-}
 .dropdownsubmenu > a::after {
   content: "";
 }

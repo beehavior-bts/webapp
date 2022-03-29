@@ -56,7 +56,7 @@
 
   @media screen and (max-width: 600px){
     .main-content{
-      width: 450px;
+      width: 430px;
     }
   }
   @media screen and (max-width: 450px){

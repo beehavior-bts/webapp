@@ -73,5 +73,37 @@
       height: 130px;
     }
   }
+@media screen and (max-width: 900px){
+    .description{
+     font-size: 20px;
+    }
 
+    .user-image{
+      width: 50px;
+    }
+    .user-image img{
+      width: 30px;
+    }
+
+    .icon{
+      flex-direction: column;
+      width: 30px;
+      margin-right:3px;
+    }
+    .icon img{
+      width: 30px;
+      padding: 0;
+    }
+  }
+
+  @media screen and (max-width: 600px){
+    .description{
+      font-size: 16px;
+    }
+  }
+  @media screen and (max-width: 450px){
+    .description{
+      font-size: 12px;
+    }
+  }
 </style>
