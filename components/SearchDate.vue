@@ -30,7 +30,9 @@
 .date input {
   position: relative;
   outline: none;
-  color: transparent;
+  color: white;
+  font-size: 20px;
+  text-align: center;
 }
 
 #start:after {

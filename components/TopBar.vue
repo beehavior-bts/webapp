@@ -12,11 +12,11 @@
             <img width="46" height="46" src="@/assets/img/double_arrow.svg">
           </a>
           <ul class="dropdownsubmenu">
-            <li><a href="/panel/welcome/"> <img src="@/assets/img/home.svg"> Accueil</a>
-            <li><a href="/panel/alertes"> <img src="@/assets/img/add_alert.svg"> Alertes</a></li>
-            <li><a href="/panel/compte"> <img src="@/assets/img/account_circle.svg"> Compte</a></li>
-            <li><a href="/panel/admin"> <img src="@/assets/img/security.svg"> Admin</a></li>
-            <li><a href="/"> <img src="@/assets/img/power.svg"> Déconnexion </a></li>
+            <li><a href="/panel/welcome/"> <img src="@/assets/img/home.svg"><br> Accueil</a>
+            <li><a href="/panel/alertes"> <img src="@/assets/img/add_alert.svg"><br> Alertes</a></li>
+            <li><a href="/panel/compte"> <img src="@/assets/img/account_circle.svg"><br> Compte</a></li>
+            <li><a href="/panel/admin"> <img src="@/assets/img/security.svg"><br> Admin</a></li>
+            <li><a href="/"> <img src="@/assets/img/power.svg"> <br>Déconnexion </a></li>
           </ul>
         </li>
       </ul>
@@ -130,7 +130,7 @@ export default defineComponent({
   display: block;
 
   /* Dimensions des liens */
-  width: 100px;
+  width: 115px;
   height: 70px;
   line-height: 30px; /* Doit etre equivalent a la hauteur du menu pour centrer le texte verticalement */
   border-bottom: 1px solid black;
@@ -172,22 +172,17 @@ export default defineComponent({
 .dropdownmenu li {
   background-color: #666; /* Couleur d'arriere-plan du menu */
 }
-.dropdownmenu li a {
-  color: #ccc; /* Couleur du texte du menu */
-}
 
-.dropdownmenu li:hover a {
-  color: #fff; /* Couleur du texte du menu au survol */
-}
 .dropdownmenu ul li {
-  background-color: #ccc; /* Couleur d'arriere-plan des sous-menu */
+  background-color: #DDDDDD; /* Couleur d'arriere-plan des sous-menu */
 }
 
 .dropdownmenu ul li a {
-  color: #666; /* Couleur du texte des sous-menu */
+  color: #434343; /* Couleur du texte des sous-menu */
+  text-decoration: none;
 }
 .dropdownmenu ul li:hover a {
-  color: #f00; /* Couleur du texte des sous-menu au survol */
+  color: red; /* Couleur du texte des sous-menu au survol */
 }
 
 #clickable-dropdown {

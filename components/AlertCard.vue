@@ -68,42 +68,85 @@
  }
 
 @media screen and (max-width: 900px){
+
     .main-box{
-      width: 650px;
+      width: 100%;
       height: 130px;
     }
-  }
-@media screen and (max-width: 900px){
     .description{
      font-size: 20px;
     }
 
-    .user-image{
+    .warn-alert{
       width: 50px;
     }
-    .user-image img{
+    .warn-alert img{
       width: 30px;
     }
 
-    .icon{
+    .trash{
       flex-direction: column;
-      width: 30px;
+      width: 50px;
       margin-right:3px;
     }
-    .icon img{
-      width: 30px;
+    .trash img{
+      width: 50px;
       padding: 0;
     }
   }
 
   @media screen and (max-width: 600px){
+
+    .main-box{
+      width: 100%;
+      height: 130px;
+    }
     .description{
-      font-size: 16px;
+     font-size: 20px;
+    }
+
+    .warn-alert{
+      width: 50px;
+    }
+    .warn-alert img{
+      width: 30px;
+    }
+
+    .trash{
+      flex-direction: column;
+      width: 40px;
+      margin-right:3px;
+    }
+    .trash img{
+      width: 40px;
+      padding: 0;
     }
   }
   @media screen and (max-width: 450px){
-    .description{
-      font-size: 12px;
+
+    .main-box{
+      width: 100%;
+      height: 130px;
     }
-  }
+    .description{
+     font-size: 20px;
+    }
+
+    .warn-alert{
+      width: 50px;
+    }
+    .warn-alert img{
+      width: 30px;
+    }
+
+    .trash{
+      flex-direction: column;
+      width: 30px;
+      margin-right:3px;
+    }
+    .trash img{
+      width: 30px;
+      padding: 0;
+    }
+}
 </style>
