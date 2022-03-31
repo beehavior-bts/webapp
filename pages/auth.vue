@@ -1,6 +1,6 @@
 <template>
   <div class="bg">
-    <TopBar />
+    <TopBar forceHideMenu="true" />
     <Nuxt />
   </div>
 </template>

@@ -1,7 +1,7 @@
 <template>
   <div class ="list-bar">
     <select id="choix_ruche" class="liste"><img class="arrow" src="@/assets/img/arrow_drop_down_circle.svg" width="58">
-      <option value="00">Sélectionnez une Ruche</option>
+      <option value="00" disabled >Sélectionnez une Ruche </option>
       <option value="01">Ruche1</option>
       <option value="02">Ruche2</option>
       <option value="03">Ruche3</option>

@@ -67,7 +67,7 @@ select{
   appearance: none;
   border: none;
 
-  width: 151px;
+  width: 200px;
   height: 40px;
 
   background: #F7F7F7;
@@ -87,7 +87,7 @@ input{
   appearance: none;
   border: none;
 
-  width: 151px;
+  width: 200px;
   height: 40px;
 
   background: #F7F7F7;

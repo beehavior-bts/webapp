@@ -1,14 +1,14 @@
 <template>
-    <div class="card-body">
-      <div class ="form-box">
-        <center>Login</center>
-                    <form action="" @submit.prevent="onSubmit">
-                        <input type="text" placeholder="Email" v-model="name" class="form-control">
-                        <input type="password" placeholder="Mot de Passe" v-model="password" class="form-control">
-                        <nuxt-link to="/panel/welcome/" class="btn">Connexion</nuxt-link>
-                    </form>
-        </div>
-      </div>
+  <div class="card-body">
+    <div class ="form-box">
+      <center>Login</center>
+      <form action="" @submit.prevent="onSubmit">
+          <input type="text" placeholder="Email" v-model="name" class="form-control">
+          <input type="password" placeholder="Mot de Passe" v-model="password" class="form-control">
+          <nuxt-link to="/panel/welcome/" class="btn">Connexion</nuxt-link>
+      </form>
+    </div>
+  </div>
 </template>
 <script>
 export default {

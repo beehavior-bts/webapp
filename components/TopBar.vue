@@ -6,7 +6,7 @@
             <h1> BeeHavior </h1>
           </div>
       </div>
-      <ul class="dropdownmenu">
+      <ul class="dropdownmenu" v-show="!forceHideMenu">
         <li>
           <a id="clickable-dropdown" href="#">
             <img width="46" height="46" src="@/assets/img/double_arrow.svg">
@@ -27,7 +27,14 @@
 import { ref, defineComponent } from '@nuxtjs/composition-api'
 
 export default defineComponent({
-  setup() {
+  props: {
+    forceHideMenu: {
+      type: Boolean,
+      required: false,
+      default: false
+    }
+  },
+  setup(props) {
     const displaySidebar = ref(false)
 
     const handleDisplaySidebar = () => {

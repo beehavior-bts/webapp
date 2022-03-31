@@ -64,7 +64,6 @@
 
 .SearchBtn{
 
-  padding: 25px 25px 25px 25px;
   background: #4BD960;
   font-family: 'Montserrat';
   font-style: normal;
@@ -75,10 +74,29 @@
   color: white;
   border-radius: 0 10px 10px 0;
   border: none;
-
-
-
-
 }
 
+@media screen and (max-width: 900px){
+    .box-date{
+      width: 100%;
+    }
+  }
+
+  @media screen and (max-width: 600px){
+    .box-date{
+      width: 100%;
+    }
+  }
+  @media screen and (max-width: 450px){
+    .date{
+      width: 65%;
+    }
+    .SearchBtn{
+      width: 35%;
+      font-size: 17px;
+    }
+    .date input {
+  font-size: 13px;
+}
+  }
 </style>
