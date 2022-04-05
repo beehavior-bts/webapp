@@ -2,18 +2,15 @@
   <div>
     <div class="main-content">
       <HiveSelector />
-      <Graph>
-        [Zone Graphique Données]
-      </Graph>
+      <div>
+        <Graph>
+          [Zone de graphique pour données]
+        </Graph>
+      </div>
     </div>
+    <div id="chart"><chart></chart></div>
   </div>
 </template>
-
-<script>
-  export default {
-    name: 'welcomePage'
-  }
-</script>
 
 <style scoped>
   .main-content {
@@ -27,6 +24,10 @@
     overflow-y: scroll;
     scrollbar-width: none;
     -ms-overflow-style: none;
+  }
+
+  .main-content::-webkit-scrollbar {
+    display: none;
   }
 
   @media screen and (max-width: 900px){

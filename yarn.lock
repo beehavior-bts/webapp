@@ -1455,20 +1455,6 @@
     estree-walker "^2.0.1"
     picomatch "^2.2.2"
 
-"@types/chart.js@^2.7.55":
-  version "2.9.35"
-  resolved "https://registry.yarnpkg.com/@types/chart.js/-/chart.js-2.9.35.tgz#10ddee097ab9320f8eabd8a31017fda3644d9218"
-  integrity sha512-MWx/zZlh4wHBbM4Tm4YsZyYGb1/LkTiFLFwX/FXb0EJCvXX2xWTRHwlJ2RAAEXWxLrOdaAWP8vFtJXny+4CpEw==
-  dependencies:
-    moment "^2.10.2"
-
-"@types/highcharts@^7.0.0":
-  version "7.0.0"
-  resolved "https://registry.npmjs.org/@types/highcharts/-/highcharts-7.0.0.tgz"
-  integrity sha512-YDevls0s9uqz6VEbchxp+NEaKssAPq5aDZgqEUpxOIUCQEncQtXxibp1w4lvgKyhM4qDejAcSZ+DKfA/kzqR0A==
-  dependencies:
-    highcharts "*"
-
 "@types/html-minifier-terser@^5.0.0":
   version "5.1.2"
   resolved "https://registry.npmjs.org/@types/html-minifier-terser/-/html-minifier-terser-5.1.2.tgz"
@@ -2505,18 +2491,13 @@ chardet@^0.7.0:
   resolved "https://registry.npmjs.org/chardet/-/chardet-0.7.0.tgz"
   integrity sha512-mT8iDcrh03qDGRRmoA2hmBJnxpllMR+0/0qlzjqZES6NdiWDcZkCNAk4rPFZ9Q85r27unkiNNg8ZOiwZXBHwcA==
 
-chart.js@^2.3.0:
+chart.js@2.9.4, chart.js@^2.3.0:
   version "2.9.4"
   resolved "https://registry.yarnpkg.com/chart.js/-/chart.js-2.9.4.tgz#0827f9563faffb2dc5c06562f8eb10337d5b9684"
   integrity sha512-B07aAzxcrikjAPyV+01j7BmOpxtQETxTSlQ26BEYJ+3iUkbNKaOJ/nDbT6JjyqYxseM0ON12COHYdU2cTIjC7A==
   dependencies:
     chartjs-color "^2.1.0"
     moment "^2.10.2"
-
-chart.js@^3.7.1:
-  version "3.7.1"
-  resolved "https://registry.yarnpkg.com/chart.js/-/chart.js-3.7.1.tgz#0516f690c6a8680c6c707e31a4c1807a6f400ada"
-  integrity sha512-8knRegQLFnPQAheZV8MjxIXc5gQEfDFD897BJgv/klO/vtIyFFmgMXrNfgrXpbTr/XbTturxRgxIXx/Y+ASJBA==
 
 chartjs-color-string@^0.6.0:
   version "0.6.0"
@@ -4128,15 +4109,6 @@ hex-color-regex@^1.1.0:
   version "1.1.0"
   resolved "https://registry.npmjs.org/hex-color-regex/-/hex-color-regex-1.1.0.tgz"
   integrity sha512-l9sfDFsuqtOqKDsQdqrMRk0U85RZc0RtOR9yPI7mRVOa4FsR/BVnZ0shmQRM96Ji99kYZP/7hn1cedc1+ApsTQ==
-
-highcharts@*:
-  version "10.0.0"
-  resolved "https://registry.npmjs.org/highcharts/-/highcharts-10.0.0.tgz"
-  integrity sha512-a14PrTraVaoSNyaRPhLF/jJ3/09rJwfUZedLgZOkzozGz4K/H8WtWNJtUZt/tc5QiJkaZHw4YX7vvuO98s+EoA==
-
-"highcharts@github:highcharts/highcharts-dist#nightly":
-  version "10.0.0-modified"
-  resolved "git+ssh://git@github.com/highcharts/highcharts-dist.git#78ccd549e2481680a8997fd93e0a81f891b12c45"
 
 hmac-drbg@^1.0.1:
   version "1.0.1"
@@ -7959,12 +7931,10 @@ vm-browserify@^1.0.1:
   resolved "https://registry.npmjs.org/vm-browserify/-/vm-browserify-1.1.2.tgz"
   integrity sha512-2ham8XPWTONajOR0ohOKOHXkm3+gaBmGut3SRuu75xLd/RRaY6vqgh8NBYYk7+RW3u5AtzPQZG8F10LHkl0lAQ==
 
-vue-chartjs@^3.5.1:
-  version "3.5.1"
-  resolved "https://registry.yarnpkg.com/vue-chartjs/-/vue-chartjs-3.5.1.tgz#d25e845708f7744ae51bed9d23a975f5f8fc6529"
-  integrity sha512-foocQbJ7FtveICxb4EV5QuVpo6d8CmZFmAopBppDIGKY+esJV8IJgwmEW0RexQhxqXaL/E1xNURsgFFYyKzS/g==
-  dependencies:
-    "@types/chart.js" "^2.7.55"
+vue-chartjs@^4.0.3:
+  version "4.0.3"
+  resolved "https://registry.yarnpkg.com/vue-chartjs/-/vue-chartjs-4.0.3.tgz#d8579bcd73ade6b22a66acbdc86f36a6c78603cf"
+  integrity sha512-TorpMvDzDqbqEe0H5iuF/Fundc7gf0urrXhkHnLYl2iL9NTKC3H1gAggOPUmJ+TX1z35Jub4392TAx0MzAD/hQ==
 
 vue-client-only@^2.0.0:
   version "2.1.0"

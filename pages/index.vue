@@ -5,6 +5,8 @@
 <script>
 import { defineComponent, onBeforeMount, useRouter } from '@nuxtjs/composition-api'
 
+
+
 export default defineComponent({
   setup() {
     const router = useRouter()

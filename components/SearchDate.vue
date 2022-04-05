@@ -19,7 +19,6 @@
   width: 100%;
   height: 70px;
   border-radius: 10px;
-
 }
 
 .date{
@@ -33,10 +32,19 @@
   color: white;
   font-size: 20px;
   text-align: center;
+  color: transparent;
 }
 
 #start:after {
   content: "DEBUT";
+  position: absolute;
+  color: white;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+#end:after {
+  content: "FIN";
   position: absolute;
   color: white;
   top: 50%;
@@ -76,7 +84,7 @@
   border: none;
 }
 
-@media screen and (max-width: 900px){
+  @media screen and (max-width: 900px){
     .box-date{
       width: 100%;
     }

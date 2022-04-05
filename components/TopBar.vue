@@ -12,11 +12,11 @@
             <img width="46" height="46" src="@/assets/img/double_arrow.svg">
           </a>
           <ul class="dropdownsubmenu">
-            <li><a href="/panel/welcome/"> <img src="@/assets/img/home.svg"><br> Accueil</a>
-            <li><a href="/panel/alertes"> <img src="@/assets/img/add_alert.svg"><br> Alertes</a></li>
-            <li><a href="/panel/compte"> <img src="@/assets/img/account_circle.svg"><br> Compte</a></li>
-            <li><a href="/panel/admin"> <img src="@/assets/img/security.svg"><br> Admin</a></li>
-            <li><a href="/"> <img src="@/assets/img/power.svg"> <br>Déconnexion </a></li>
+            <li><nuxt-link to="/panel/welcome/"> <img src="@/assets/img/home.svg"><br> Accueil </nuxt-link></li>
+            <li><nuxt-link to="/panel/alertes"> <img src="@/assets/img/add_alert.svg"><br>Alertes </nuxt-link></li>
+            <li><nuxt-link to="/panel/compte"> <img src="@/assets/img/account_circle.svg"><br>Compte </nuxt-link></li>
+            <li><nuxt-link to="/panel/admin"> <img src="@/assets/img/security.svg"><br>Admin </nuxt-link></li>
+            <li><nuxt-link to="/"><img src="@/assets/img/power.svg"><br>Déconnexion </nuxt-link></li>
           </ul>
         </li>
       </ul>

@@ -125,10 +125,6 @@ img{
     input{
       width: 200px;
     }
-    select{
-
-
-    }
   }
   @media screen and (max-width: 600px){
     .box_config_alert{

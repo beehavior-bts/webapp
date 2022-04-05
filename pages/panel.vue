@@ -38,7 +38,7 @@
 }
 .main {
   position: relative;
-  width: 75%;
+  width: 100%;
   background-color: #9FBD94;
 }
 

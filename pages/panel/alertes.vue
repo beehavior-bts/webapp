@@ -47,6 +47,9 @@
     scrollbar-width: none;
     -ms-overflow-style: none;
   }
+  .main-content::-webkit-scrollbar {
+    display: none;
+  }
 
   @media screen and (max-width: 900px){
     .main-content{
