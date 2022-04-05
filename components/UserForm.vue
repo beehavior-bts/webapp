@@ -31,6 +31,7 @@
   justify-content: center;
   align-items: center;
   gap: 5rem;
+  margin:auto;
  }
   .mdp-box title{
 
@@ -53,15 +54,16 @@
   .user-box{
     display: flex;
     flex-direction: column;
-    width: 100%;
-    height: 230px;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 60%;
     height: 270px;
     border-radius: 10px;
     background: #434343;
     box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.25);
+  }
+    .user-box form{
+    width: 100%;
   }
   .mdp-box{
 
@@ -69,11 +71,15 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 230px;
+    width: 60%;
+    height: 270px;
     background: #434343;
     box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
+  }
+  .mdp-box form{
+
+    width: 100%;
   }
 
   .form-user{
@@ -104,15 +110,15 @@
     box-sizing: border-box;
     border-radius: 10px;
 
-    font-size-adjust: 1;
+    font-size-adjust: 0.75;
   }
   center {
+      display: flex;
       font-family: 'Montserrat';
       font-style: normal;
       width: 100%;
       font-weight: 600;
       font-size: 40px;
-      line-height: 50px;
       text-align: center;
       color: #000000;
       border-radius: 10px 10px 0 0;
@@ -160,6 +166,11 @@
   @media screen and (max-width: 450px){
     .form-box{
       width: 350px;
+    }
+    center{
+      position: relative;
+      font-size: 20px;
+      margin-bottom: 40px;
     }
   }
 </style>

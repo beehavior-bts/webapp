@@ -28,6 +28,7 @@
     gap: 1.5em;
 
     text-align: center;
+    text-align-last: center;
     font-size: 20px;
   }
 

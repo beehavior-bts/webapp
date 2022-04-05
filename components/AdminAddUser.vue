@@ -16,7 +16,6 @@
 
   width: 100%;
   height: 100px;
-  margin: auto;
 
   background: #434343;
   border-radius: 10px;
@@ -66,37 +65,44 @@ img{
   gap: 1.5rem;
 }
 
- @media screen and (max-width: 900px){
+  @media screen and (max-width: 900px){
     .box_add_user{
-      width: 650px;
-    }
-    input{
-      width: 200px;
-    }
-  }
-
-  @media screen and (max-width: 600px){
-    .box_add_user{
-      width: 450px;
-    }
-     input{
-      width: 100px;
-    }
-  }
-  @media screen and (max-width: 450px){
-    .box_add_user{
-      width: 350px;
-      justify-content:center;
-    }
-     .input-box{
-      width: 250px;
-      gap: 0.25rem;;
-      flex-direction: column;
-      padding: 5px 0 5px 0;
+      width: 100%;
+      height: 100px;
     }
     input{
       width: 180px;
     }
+  }
+  @media screen and (max-width: 600px){
+    .box_add_user{
+      width: 100%;
+      height: 100px;
+    }
+    input{
+      width: 120px;
+    }
+  }
+  @media screen and (max-width: 450px){
+    .box_add_user{
+      width: 100%;
+      height: 150px;
+      padding-bottom: 0;
+    }
+    .input-box{
+      width: 250px;
+      gap: 0;
+      flex-direction: column;
+      align-items: center;
+      padding-top:1.8rem ;
+    }
+    input{
+      width: 180px;
+      flex-direction: column;
+      padding-left: 10px;
+      margin: 0;
+    }
+
   }
 
 </style>

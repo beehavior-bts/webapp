@@ -74,7 +74,7 @@ select{
   border-radius: 6px;
   box-sizing: border-box;
   padding-left: 10px;
-  /*background-image: url('@/assets/img/arrow_drop_down_circle.svg') no-repeat center right;*/
+
 }
 
 select::after {
@@ -121,9 +121,14 @@ img{
       width: 100%;
       height: 100px;
     }
-
+    .select-box{
+      width: 100%;
+      gap: 0.5rem;;
+      flex-direction: row;
+      padding: 5px 0 5px 0;
+    }
     input{
-      width: 200px;
+      width: 100px;
     }
   }
   @media screen and (max-width: 600px){
@@ -134,6 +139,7 @@ img{
     input{
       width: 100px;
     }
+
     select{
       width:100px;
     }

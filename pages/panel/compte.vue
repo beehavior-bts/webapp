@@ -3,9 +3,7 @@
   <UserInfos />
   <UserForm />
 </div>
-
 </template>
-
 
 <style scoped>
   .main-content {

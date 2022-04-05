@@ -48,7 +48,7 @@
 
   @media screen and (max-width: 900px){
     .main-content{
-      width: 650px;
+      width: 600px;
     }
   }
 
