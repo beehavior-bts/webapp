@@ -5,17 +5,28 @@
         <img src="@/assets/img/account_circle.svg">
       </div>
       <div class="description">
-        <slot />
+        John Doe
+        <br>John.Doe@gmail.com
       </div>
     </div>
     <div class="icon">
       <img  src="@/assets/img/info.svg">
       <img  src="@/assets/img/add-black.svg">
-      <img class="trash" src="@/assets/img/red_trash.svg" width="58">
+      <span class="del" @click="delQuerysToStore(item)"><img class="trash" src="@/assets/img/red_trash.svg"></span>
     </div>
   </div>
 </template>
+<script>
+export default {
+  props: ["buttons", "item"],
 
+  methods: {
+  delQuerysToStore(item) {
+      this.buttons.splice(this.buttons.indexOf(item), 1);
+    }
+  }
+}
+</script>
 <style scoped>
  .main {
    display: flex;

@@ -12,6 +12,7 @@
   </div>
 </template>
 
+
 <style scoped>
   .main-content {
     position: absolute;

@@ -3,31 +3,31 @@
     <div class="main-content">
       <SearchBar />
       <AdminAddUser />
-
-      <UserCard>
-        John Doe <br>
-        johndoe@gmail.com
-      </UserCard>
-      <UserCard>
-        Mickeal Doe <br>
-        Mickealdoe@gmail.com
-      </UserCard>
-      <UserCard>
-        Corentin Doe <br>
-        Corentindoe@gmail.com
-      </UserCard>
-      <UserCard>
-        Joni Doe <br>
-        Jonidoe@gmail.com
-      </UserCard>
-      <UserCard>
-        James Doe <br>
-        Jamesdoe@gmail.com
-      </UserCard>
-
+      <div class="filter-container">
+        <component v-for="item in buttons" :is="item" :key="item.id" :buttons="buttons" />
+        <img src="@/assets/img/addbutton.svg" @click="add">
+      </div>
     </div>
   </div>
 </template>
+
+<script>
+const dynamicComponentFilter = () => import("@/components/UserCard");
+
+export default {
+  data() {
+    return {
+      buttons: []
+    }
+  },
+
+  methods: {
+    add() {
+      this.buttons.push(dynamicComponentFilter);
+    }
+  }
+}
+</script>
 
 <style scoped>
   .main-content {

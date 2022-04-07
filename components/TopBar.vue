@@ -171,10 +171,6 @@ export default defineComponent({
   text-align: center;
 }
 
-
-
-
-
 /* Gestion des couleurs */
 .dropdownmenu li {
   background-color: #666; /* Couleur d'arriere-plan du menu */

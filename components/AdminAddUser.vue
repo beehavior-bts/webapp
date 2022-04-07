@@ -4,12 +4,32 @@
 
       <input type="text" v-model="search" placeholder="Nom utilisateur" /> <br> <br>
       <input type="text" v-model="search" placeholder="Email" /> <br> <br>
+      <div class="filter-container">
+        <component v-for="item in buttons" :is="item" :key="item.id" :buttons="buttons" />
+        <img src="@/assets/img/addbutton.svg" @click="add">
+      </div>
 
     </div>
-      <img  src="@/assets/img/addbutton.svg">
+
   </div>
 </template>
+<script>
+const dynamicComponentFilter = () => import("@/components/UserCard");
 
+export default {
+  data() {
+    return {
+      buttons: []
+    }
+  },
+
+  methods: {
+    add() {
+      this.buttons.push(dynamicComponentFilter);
+    }
+  }
+}
+</script>
 <style scoped>
 
 .box_add_user{
