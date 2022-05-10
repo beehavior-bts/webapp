@@ -1,128 +1,69 @@
 <template>
-  <div class ="box_add_user">
-    <div class="input-box">
-
-      <input type="text" v-model="search" placeholder="Nom utilisateur" /> <br> <br>
-      <input type="text" v-model="search" placeholder="Email" /> <br> <br>
-      <div class="filter-container">
-        <component v-for="item in buttons" :is="item" :key="item.id" :buttons="buttons" />
-        <img src="@/assets/img/addbutton.svg" @click="add">
-      </div>
-
+  <div v-if="$device.isDesktop" class="fx-row max-fill box_add_user">
+    <div class="fx-row input-box">
+      <input v-model="search" type="text" placeholder="Nom utilisateur">
+      <input v-model="search" type="text" placeholder="Email">
     </div>
-
+    <img class="add-img" src="@/assets/img/icons/add.svg">
+  </div>
+  <div v-else class="fx-column max-fill box_add_user" style="gap: 0.75rem; padding: 1rem 2rem">
+    <input v-model="search" type="text" placeholder="Nom utilisateur" style="width: 100%">
+    <input v-model="search" type="text" placeholder="Email" style="width: 100%">
+    <div class="fx-row" style="justify-content: center; background-color: #2290F5; width: 100%; height: 2rem; border-radius: 8px">
+      <img :style="[ $device.isMobile ? {'width': '16px'} : {'width': '32px'} ]" src="@/assets/img/icons/add.svg">
+    </div>
   </div>
 </template>
+
 <script>
-const dynamicComponentFilter = () => import("@/components/UserCard");
-
 export default {
-  data() {
-    return {
-      buttons: []
-    }
-  },
-
-  methods: {
-    add() {
-      this.buttons.push(dynamicComponentFilter);
-    }
-  }
+  name: 'AdminAddUser'
 }
 </script>
+
 <style scoped>
-
-.box_add_user{
-
-  width: 100%;
-  height: 100px;
-
-  background: #434343;
-  border-radius: 10px;
-
-  display: flex;
-  flex-direction:row ;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 1rem 0 1rem;
-  box-sizing: border-box;
-  gap: 1.5rem;
+  .box_add_user{
+    background: #434343;
+    border-radius: 6px;
+    justify-content: space-between;
+    padding: 2rem;
+    box-sizing: border-box;
+    align-items: center;
   }
 
-.input-box{
-  display: flex;
-  flex-direction:row ;
-  align-items: center;
-  justify-content: flex-end;
-  padding: 0 1rem 0 1rem;
-  box-sizing: border-box;
-  gap: 1.5rem;
-}
-
-input{
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  border: none;
-
-  width: 300px;
-  height: 40px;
-
-  background: #F7F7F7;
-  border-radius: 6px;
-  box-sizing: border-box;
-  padding-left: 10px;
-  /*background-image: url('@/assets/img/arrow_drop_down_circle.svg') no-repeat center right;*/
-}
-
-img{
-  display: flex;
-  flex-direction:row ;
-  align-items: center;
-  justify-content: flex-end;
-  padding: 0 1rem 0 1rem;
-  box-sizing: border-box;
-  gap: 1.5rem;
-}
-
-  @media screen and (max-width: 900px){
-    .box_add_user{
-      width: 100%;
-      height: 100px;
-    }
-    input{
-      width: 180px;
-    }
-  }
-  @media screen and (max-width: 600px){
-    .box_add_user{
-      width: 100%;
-      height: 100px;
-    }
-    input{
-      width: 120px;
-    }
-  }
-  @media screen and (max-width: 450px){
-    .box_add_user{
-      width: 100%;
-      height: 150px;
-      padding-bottom: 0;
-    }
-    .input-box{
-      width: 250px;
-      gap: 0;
-      flex-direction: column;
-      align-items: center;
-      padding-top:1.8rem ;
-    }
-    input{
-      width: 180px;
-      flex-direction: column;
-      padding-left: 10px;
-      margin: 0;
-    }
-
+  .input-box {
+    align-items: center;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    gap: 1.5rem;
   }
 
+  .add-img {
+    padding: 1rem;
+    background-color: #2290F5;
+    border-radius: 100%;
+  }
+
+  input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+
+    width: 300px;
+    height: 40px;
+
+    background: #F7F7F7;
+    border-radius: 6px;
+    box-sizing: border-box;
+    padding-left: 10px;
+    /*background-image: url('@/assets/img/arrow_drop_down_circle.svg') no-repeat center right;*/
+  }
+
+  input {
+    width: 180px;
+    flex-direction: column;
+    padding-left: 10px;
+    margin: 0;
+  }
 </style>

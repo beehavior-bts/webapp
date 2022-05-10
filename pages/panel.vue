@@ -1,59 +1,28 @@
 <template>
-  <div class="mainVue">
-    <div class="topcomp">
-      <TopBar />
-    </div>
-
-    <div class="flex-row">
-
-      <div class="main">
-        <Nuxt />
-      </div>
-      <div class="sidecomp">
-        <SideBar />
-      </div>
-    </div>
+  <div class="main-flex-container" :style="[ $device.isDesktop ? {'padding': '5px 5px 0 5px'} : {'padding': '0'} ]">
+    <Nuxt />
   </div>
 </template>
 
+<script>
+export default {
+  name: 'PanelPage',
+  layout (context) {
+    return context.$device.isMobile ? 'mobile' : 'desktop'
+  }
+}
+</script>
+
 <style scoped>
-#app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-
-.flex-row {
-  position: absolute;
-  top: 70px;
-  left: 0;
-  right: 0;
-  bottom: 0;
-
-  display: flex;
-  flex-direction: row;
-}
-.main {
-  position: relative;
-  width: 100%;
-  background-color: #9FBD94;
-}
-
-.sidecomp {
-  width: 25%;
-}
-
-@media screen and (max-width: 1318px) {
-  .sidecomp {
-    display: none;
-  }
-
-  .main {
+  .main-flex-container {
+    display: flex;
     width: 100%;
+    max-width: 1000px;
+    height: 100%;
+    margin: auto auto;
+    /* background-color: black; */
+    /* border: 1px solid black; */
+    box-sizing: border-box;
+    overflow: hidden;
   }
-
-}
 </style>

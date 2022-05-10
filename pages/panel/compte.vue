@@ -1,9 +1,23 @@
 <template>
-<div class="main-content">
-  <UserInfos />
-  <UserForm />
-</div>
+  <div class="max-fill">
+    <div class="scrollable-content">
+      <QUserInfo :data="userInfo" />
+    </div>
+  </div>
 </template>
+
+<script>
+import { mapGetters } from 'vuex'
+
+export default {
+  name: 'AccountPage',
+  computed: {
+    ...mapGetters({
+      userInfo: 'account/getUserInfo'
+    })
+  }
+}
+</script>
 
 <style scoped>
   .main-content {
@@ -22,18 +36,30 @@
     display: none;
   }
 
-    @media screen and (max-width: 900px){
+  .scrollable-content {
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .scrollable-content::-webkit-scrollbar {
+    display: none;
+  }
+
+  @media screen and (max-width: 900px) {
     .main-content{
       width: 650px;
     }
   }
 
-  @media screen and (max-width: 600px){
+  @media screen and (max-width: 600px) {
     .main-content{
       width: 450px;
     }
   }
-  @media screen and (max-width: 450px){
+  @media screen and (max-width: 450px) {
     .main-content{
       width: 380px;
     }

@@ -1,37 +1,14 @@
 <template>
-  <div>
-    <div class="main-content">
-      <HiveSelector />
-      <AlertEditorBox />
-
-      <AlertCard>
-        Humidité supérieure à 15%
-      </AlertCard>
-      <AlertCard>
-        Humidité supérieure à 18%
-      </AlertCard>
-      <AlertCard>
-        Température inférieure à 30°C
-      </AlertCard>
-      <AlertCard>
-        Température supérieur à 40°C
-      </AlertCard>
-      <AlertCard>
-        Masse inférieure à 75kg
-      </AlertCard>
-      <AlertCard>
-        Masse supérieure à 120kg
-      </AlertCard>
-
-
-    </div>
+  <div class="max-fill">
+    <QHiveSelector />
+    <QAddRule />
   </div>
 </template>
 
 <script>
-  export default {
-    name: 'welcomePage'
-  }
+export default {
+  name: 'AlertPage'
+}
 </script>
 
 <style scoped>

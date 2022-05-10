@@ -1,11 +1,9 @@
 <template>
-  <div>
-    <Login />
-  </div>
+  <Nuxt />
 </template>
 
 <script>
 export default {
-  name: 'LoginPage'
+  name: 'DefaultLayout'
 }
 </script>

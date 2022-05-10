@@ -1,26 +1,40 @@
 <template>
   <div class="card-body">
-    <div class ="form-box">
+    <div class="form-box">
       <center>Login</center>
       <form action="" @submit.prevent="onSubmit">
-          <input type="text" placeholder="Email" v-model="name" class="form-control">
-          <input type="password" placeholder="Mot de Passe" v-model="password" class="form-control">
-          <nuxt-link to="/panel/welcome/" class="btn">Connexion</nuxt-link>
+        <input v-model="loginForm.email" type="text" placeholder="Email" class="form-control">
+        <input v-model="loginForm.password" type="password" placeholder="Mot de Passe" class="form-control">
+        <a class="btn" @click="fetchLogin(loginForm)">
+          Connexion
+        </a>
       </form>
     </div>
   </div>
 </template>
-<script>
-export default {
 
+<script>
+import { mapActions } from 'vuex'
+
+export default {
+  name: 'LoginCard',
+  data () {
+    return {
+      loginForm: {
+        email: '',
+        password: ''
+      }
+    }
+  },
+  methods: {
+    ...mapActions({
+      fetchLogin: 'account/fetchLogin'
+    })
+  }
 }
 </script>
 
 <style scoped>
-
-/* formulaire */
-
-
  center {
     font-family: 'Montserrat';
     font-style: normal;
@@ -104,7 +118,4 @@ width:auto;
             text-align: center;
     }
   }
-
-
-
 </style>

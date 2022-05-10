@@ -1,9 +1,16 @@
 <template>
   <div class="bg">
-    <TopBar forceHideMenu="true" />
+    <!--<TopBar forceHideMenu="true" />-->
+    <QTopBar />
     <Nuxt />
   </div>
 </template>
+
+<script>
+export default {
+  name: 'AuthPage'
+}
+</script>
 
 <style scoped>
 .bg {

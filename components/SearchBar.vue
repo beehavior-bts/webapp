@@ -1,15 +1,13 @@
 <template>
-  <div class="icon-wrapped-on-searchbar">
-    <div class="search-wrapper">
-      <input type="text" v-model="search" placeholder="Rechercher un utilisateur" /> <br> <br>
-
-    </div>
-    <!--<img  src="@/assets/img/search.svg"> -->
+  <div class="search-wrapper">
+    <input v-model="search" type="text" placeholder="Rechercher un utilisateur">
+    <br>
+    <br>
   </div>
+  <!--<img  src="@/assets/img/search.svg"> -->
 </template>
 
 <style scoped>
-
   input{
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -18,7 +16,6 @@
 
     width: 100%;
     height: 45px;
-    margin: auto;
 
     background: #F7F7F7;
     border-radius: 6px;
@@ -31,9 +28,5 @@
   }
 
   .search-wrapper{
-
-  margin-bottom: 30px;
-
   }
 </style>
-
