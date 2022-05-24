@@ -1,7 +1,7 @@
 <template>
   <div class="max-fill">
     <div class="scrollable-content">
-      <QUserInfo :data="userInfo" />
+      <QUserInfo :datas="userInfo" />
     </div>
   </div>
 </template>

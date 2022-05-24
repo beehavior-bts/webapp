@@ -2,12 +2,12 @@
   <div class="fx-column user-info">
     <div class="fx-row user-static">
       <div class="user-pp">
-        <h3>{{ data.username[0].toUpperCase() }}</h3>
+        <h3>{{ datas.username[0].toUpperCase() }}</h3>
       </div>
       <div class="fx-column">
-        <p>ID : {{ $store.state.account.id }}</p>
-        <p>NOM : {{ $store.state.account.username }} </p>
-        <p>EMAIL : {{ $store.state.account.email }}</p>
+        <p>ID : {{ datas.id }}</p>
+        <p>NOM : {{ datas.username }} </p>
+        <p>EMAIL : {{ datas.email }}</p>
       </div>
     </div>
     <input v-model="userInfo.username" type="text" placeholder="Nom utilisateur" :disabled="blockInputs">
@@ -33,7 +33,7 @@ import { mapActions } from 'vuex'
 export default {
   name: 'QUserInfo',
   props: {
-    data: {
+    datas: {
       type: Object,
       required: true,
       default: () => {
@@ -49,9 +49,9 @@ export default {
   data () {
     return {
       userInfo: {
-        username: this.$store.state.account.username,
-        email: this.$store.state.account.email,
-        phone: this.$store.state.account.phone
+        username: this.datas.username,
+        email: this.datas.email,
+        phone: this.datas.phone
       },
       blockInputs: true
     }

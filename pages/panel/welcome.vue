@@ -13,8 +13,8 @@
     </div>
     <div class="scrollable-content">
       <div class="fx-row period-overlap-but">
-        <button>Début</button>
-        <button>Fin</button>
+        <input v-model="start_date" type="datetime-local" placeholder="Début" name="">
+        <input v-model="end_date" type="datetime-local" placeholder="Fin" name="">
         <button @click="fetchMetric()">
           Rechercher
         </button>
@@ -29,6 +29,7 @@
 </template>
 
 <script>
+/* eslint-disable no-console */
 import { mapGetters } from 'vuex'
 
 export default {
@@ -40,7 +41,10 @@ export default {
       data_timeline: [],
       data_temperature: [],
       data_mass: [],
-      data_humidity: []
+      data_humidity: [],
+
+      start_date: null,
+      end_date: null
     }
   },
   computed: {
@@ -75,7 +79,7 @@ export default {
       this.hideChart = true
       await this.$axios({
         method: 'GET',
-        url: '/metric' + '?hive=' + this.hiveSelected,
+        url: '/metric' + '?hive=' + this.hiveSelected + '&start=' + new Date(this.start_date).toISOString().slice(0, 19).replace('T', ' ') + '&end=' + new Date(this.end_date).toISOString().slice(0, 19).replace('T', ' '),
         headers: {
           'Content-Type': 'application/json'
         }
@@ -93,22 +97,18 @@ export default {
         }
         this.hideChart = false
       }).catch((err) => {
-        // eslint-disable-next-line no-console
         console.log(err.message)
         this.data_timeline = []
         this.data_temperature = []
         this.data_mass = []
         this.data_humidity = []
       })
-      // eslint-disable-next-line no-console
-      console.dir(this.data_temperature)
-      // eslint-disable-next-line no-console
       console.dir(this.data_timeline)
+      console.log('start : ' + this.start_date + ', end : ' + this.end_date)
     }
   },
   selectHive (hive) {
     this.hiveSelected = hive
-    // eslint-disable-next-line no-console
     console.log('selected hive : ' + this.hiveSelected)
   }
 }
@@ -195,6 +195,17 @@ export default {
   .period-overlap-but button:hover {
     background-color: #525252;
     border: 1px solid transparent;
+  }
+
+  input[type="datetime-local"] {
+    outline: none;
+    border: none;
+    height: 35px;
+    box-sizing: border-box;
+    padding: 0 10px;
+    width: 200px;
+    text-decoration: none;
+    border-radius: 6px;
   }
 
   @media screen and (max-width: 900px){
