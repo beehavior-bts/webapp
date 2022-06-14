@@ -1,23 +1,12 @@
 /* eslint-disable no-console */
 export const state = () => ({
-  id: 3,
+  id: 0,
   token: null,
   username: null,
   phone: null,
   email: null,
   is_admin: false,
-  hives: [
-    {
-      id: 'BEE0000000000000',
-      name: 'Ruche Test',
-      owner: 7
-    },
-    {
-      id: 'B000000000000000',
-      name: 'Super Ruche',
-      owner: 7
-    }
-  ]
+  hives: []
 })
 
 export const actions = {
@@ -31,6 +20,7 @@ export const actions = {
       data: _data
     }).then((res) => {
       this.token = res.data.content.token
+      window.localStorage.setItem('beehavior-token', res.data.content.token)
       this.$router.push('/panel/welcome')
       dispatch('fetchInfo')
     }).catch((err) => {
@@ -38,11 +28,14 @@ export const actions = {
     })
   },
   async fetchInfo ({ commit }) {
+    if (window.localStorage.getItem('beehavior-token') === null) {
+      this.$router.push('/auth/login')
+    }
     await this.$axios({
       method: 'GET',
       url: '/info',
       headers: {
-        'X-Authorization': this.token,
+        'X-Authorization': window.localStorage.getItem('beehavior-token'),
         'Access-Control-Request-Origin': 'https://prc2022.lycee-lgm.fr'
       }
     }).then((res) => {
@@ -56,13 +49,32 @@ export const actions = {
       console.log(res.data.content.username)
       console.log(this.username)
       console.log(this.email)
+    }).catch((_) => {
+      /* console.log(err.message)
+      this.$router.push('/auth/login') */
+    })
+  },
+
+  async applyNewSettings ({ commit, dispatch }, _data) {
+    const _params = new URLSearchParams()
+    _params.append('username', _data.username)
+    _params.append('email', _data.email)
+    _params.append('phone', _data.phone)
+    await this.$axios.put('/account', _params, {
+      headers: {
+        'X-Authorization': window.localStorage.getItem('beehavior-token'),
+        'Access-Control-Request-Origin': 'https://prc2022.lycee-lgm.fr'
+      }
+    }).then((res) => {
+      dispatch('fetchInfo')
     }).catch((err) => {
-      console.log(err.message)
+      console.log('error happened on func applyNewSetting : ' + err.message)
     })
   },
 
   logout () {
     this.token = null
+    window.localStorage.removeItem('beehavior-token')
     this.$router.push('/auth/login')
   }
 }
@@ -75,6 +87,11 @@ export const mutations = {
     state.phone = info.phone
     state.is_admin = info.is_admin
     state.hives = info.hives
+  },
+  setBaseUserInfo (state, info) {
+    state.username = info.username
+    state.email = info.email
+    state.phone = info.phone
   }
 }
 

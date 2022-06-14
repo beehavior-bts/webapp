@@ -3,7 +3,7 @@
     <div class="list-bar">
       <select id="choix_ruche" v-model="hiveSelected" class="liste">
         <img class="arrow" src="@/assets/img/arrow_drop_down_circle.svg" width="58">
-        <option value="00" disabled>
+        <option value="Sélectionnez une Ruche" disabled>
           Sélectionnez une Ruche
         </option>
         <option v-for="hive in hives" :key="hive.id" :value="hive.id">
@@ -117,9 +117,9 @@ export default {
 <style scoped>
 
   select{
-    -webkit-appearance: none;
+    /* -webkit-appearance: none;
     -moz-appearance: none;
-    appearance: none;
+    appearance: none; */
     border: none;
 
     width: 100%;
@@ -129,10 +129,10 @@ export default {
     border-radius: 6px;
     box-sizing: border-box;
 
-    gap: 1.5em;
+    /* gap: 1.5em;
 
     text-align: center;
-    text-align-last: center;
+    text-align-last: center; */
     font-size: 20px;
   }
 
@@ -179,6 +179,7 @@ export default {
     background-color: #434343;
     border-radius: 6px 6px 0 0;
     margin-top: 1rem;
+    flex-wrap: wrap;
   }
 
   .period-overlap-but button {

@@ -17,7 +17,7 @@
       <button class="btn-lock" @click="blockInputs = !blockInputs">
         {{ blockInputs ? 'Débloquer' : 'Bloquer' }}
       </button>
-      <button class="btn-save">
+      <button class="btn-save" @click="applyNewSettings(userInfo)">
         Enregistrer
       </button>
     </div>
@@ -58,7 +58,8 @@ export default {
   },
   methods: {
     ...mapActions({
-      logout: 'account/logout'
+      logout: 'account/logout',
+      applyNewSettings: 'account/applyNewSettings'
     })
   }
 }

@@ -5,10 +5,20 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex'
+
 export default {
   name: 'PanelPage',
   layout (context) {
     return context.$device.isMobile ? 'mobile' : 'desktop'
+  },
+  async mounted () {
+    await this.fetchInfo()
+  },
+  methods: {
+    ...mapActions({
+      fetchInfo: 'account/fetchInfo'
+    })
   }
 }
 </script>

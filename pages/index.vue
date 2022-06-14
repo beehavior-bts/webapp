@@ -12,7 +12,11 @@ export default {
   name: 'IndexPage',
   beforeMount () {
     console.log('Index Mounted')
-    this.$router.push('/auth/login')
+    if (window.localStorage.getItem('beehavior-token') !== null || window.localStorage.getItem('beehavior-token') !== undefined) {
+      this.$router.push('/panel/welcome')
+    } else {
+      this.$router.push('/auth/login')
+    }
   }
 }
 </script>

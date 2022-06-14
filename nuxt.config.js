@@ -4,7 +4,7 @@ export default {
   target: 'static',
 
   server: {
-    host: '127.0.0.1',
+    host: '192.168.0.25',
     port: 5000
   },
 
