@@ -5,10 +5,10 @@
         <img width="31" height="31" src="@/assets/img/icons/home.svg" alt="Home">
         <h5>Home</h5>
       </nuxt-link>
-      <nuxt-link to="/panel/alertes">
+      <!-- <nuxt-link to="/panel/alertes">
         <img width="31" height="31" src="@/assets/img/icons/add_alert.svg" alt="Alerts">
         <h5>Alerts</h5>
-      </nuxt-link>
+      </nuxt-link> -->
       <nuxt-link to="/panel/compte">
         <img width="31" height="31" src="@/assets/img/icons/account_circle.svg" alt="Settings">
         <h5>Settings</h5>

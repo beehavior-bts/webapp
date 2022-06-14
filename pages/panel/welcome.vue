@@ -1,11 +1,8 @@
 <template>
-  <div class="max-fill">
+  <div v-if="hives !== null && hives.length > 0" class="max-fill">
     <div class="list-bar">
       <select id="choix_ruche" v-model="hiveSelected" class="liste">
         <img class="arrow" src="@/assets/img/arrow_drop_down_circle.svg" width="58">
-        <option value="Sélectionnez une Ruche" disabled>
-          Sélectionnez une Ruche
-        </option>
         <option v-for="hive in hives" :key="hive.id" :value="hive.id">
           {{ hive.name }}
         </option>
@@ -20,10 +17,15 @@
         </button>
       </div>
       <div class="chart bg-chart fx-column" style="gap: 2rem">
-        <QLineChart v-if="!hideChart" :chart-data="{ labels: compDataTime, datasets: [{ label: 'Température', borderColor: '#d44a3d', borderWidth: 4, fill: false, data: compDataTemp }]}" />
+        <QLineChart v-if="!hideChart" :chart-data="{ labels: compDataTime, datasets: [{ label: 'Température', borderColor: '#518cc4', borderWidth: 4, fill: false, data: compDataTemp }]}" />
         <QLineChart v-if="!hideChart" :chart-data="{ labels: compDataTime, datasets: [{ label: 'Masse', borderColor: '#d44a3d', borderWidth: 4, fill: false, data: compDataMass }]}" />
-        <QLineChart v-if="!hideChart" :chart-data="{ labels: compDataTime, datasets: [{ label: 'Humidité', borderColor: '#d44a3d', borderWidth: 4, fill: false, data: compDataHumi }]}" />
+        <QLineChart v-if="!hideChart" :chart-data="{ labels: compDataTime, datasets: [{ label: 'Humidité', borderColor: '#6bc984', borderWidth: 4, fill: false, data: compDataHumi }]}" />
       </div>
+    </div>
+  </div>
+  <div v-else class="max-fill">
+    <div class="no-hives">
+      <p>Merci de contacter l'administrateur pour ajouter des ruches</p>
     </div>
   </div>
 </template>
@@ -69,10 +71,34 @@ export default {
       // eslint-disable-next-line no-console
       console.log('hive changed !!!!!!!')
       this.fetchMetric()
+    },
+    start_date (_new, _old) {
+      console.log('start date watcher : ' + _new)
+    },
+    end_date (_new, _old) {
+      console.log('end date watcher : ' + _new)
     }
   },
-  mounted () {
+  async mounted () {
     this.fetchMetric()
+    await setTimeout(() => {
+      if ((this.hives !== null) && this.hives.length > 0) {
+        /*
+        let realDay = new Date().getDate()
+        let realMonth = new Date().getMonth()
+        if (realDay < 10) {
+          realDay = '0' + realDay
+        }
+        if (realMonth < 10) {
+          realMonth = '0' + realMonth
+        }
+        this.start_date = new Date().getFullYear() + '-' + realMonth + '-' + realDay + 'T' + new Date().getHours() + ':' + new Date().getMinutes()
+        */
+        this.start_date = '2022-05-19T19:38'
+        this.end_date = '2022-06-14T19:38'
+        this.hiveSelected = this.hives[0].id
+      }
+    }, 500)
   },
   methods: {
     async fetchMetric () {
@@ -110,11 +136,27 @@ export default {
   selectHive (hive) {
     this.hiveSelected = hive
     console.log('selected hive : ' + this.hiveSelected)
+  },
+  staticBlockDate (_block) {
+    if (_block < 10) {
+      return '0' + _block
+    }
   }
 }
 </script>
 
 <style scoped>
+
+  .no-hives {
+    color: white;
+    margin: 4rem auto;
+    border: 2px solid white;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
 
   select{
     /* -webkit-appearance: none;

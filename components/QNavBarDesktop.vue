@@ -6,10 +6,10 @@
           <img width="31" height="31" src="@/assets/img/icons/home.svg" alt="Home">
           <h3>Home</h3>
         </nuxt-link>
-        <nuxt-link to="/panel/alertes">
+        <!-- <nuxt-link to="/panel/alertes">
           <img width="31" height="31" src="@/assets/img/icons/add_alert.svg" alt="Alerts">
           <h3>Alerts</h3>
-        </nuxt-link>
+        </nuxt-link> -->
         <nuxt-link to="/panel/compte">
           <img width="31" height="31" src="@/assets/img/icons/account_circle.svg" alt="Settings">
           <h3>Settings</h3>
@@ -21,7 +21,7 @@
       </div>
       <div class="disconnect-container">
         <h3>{{ userInfo.username }}</h3>
-        <a href="#" @click="logout()">
+        <a @click="logout()">
           <img width="22" src="@/assets/img/icons/power.svg" alt="Disconnect">
         </a>
       </div>
