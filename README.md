@@ -1,45 +1,76 @@
-# WebSite
+# WebSite of Beehavior
 
-## Build Setup
+## Table of contents
+- [WebSite of Beehavior](#website-of-beehavior)
+  - [Table of contents](#table-of-contents)
+  - [Introduction](#introduction)
+  - [Accounts Credentials](#accounts-credentials)
+  - [Project Dependencies](#project-dependencies)
+  - [Quickstart](#quickstart)
+    - [Run for development](#run-for-development)
+    - [Build for production](#build-for-production)
+  - [Info about project directories](#info-about-project-directories)
+  - [License](#license)
 
-```bash
-# install dependencies
-$ yarn install
+## Introduction
 
-# serve with hot reload at localhost:3000
-$ yarn dev
-
-# build for production and launch server
-$ yarn build
-$ yarn start
-
-# generate static project
-$ yarn generate
-```
+Beehavior is a project to monitor hives remotly. This web application provides a user interface to administer hives and observe hives metrics. We provide user accounts to take a look at the project.
 
 For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
 
-## Quickstart Raph
+## Accounts Credentials
+
+- Application User Credentials :
+  - Lambda User : 
+    - email : **lambda@beehavior.com**
+    - password : **root**
+
+  - Void User : 
+    - email : **vide@beehavior.com**
+    - password : **root**
+
+  - Admin User : 
+    - email : **admin@beehavior.com**
+    - password : **root**
+- TTN Credentials
+  - email : **PRCPrototypeRucheConnectee@teleworm.us**
+  - password : **LGMC'estLeMeilleurLycée**
+
+## Project Dependencies
+
+- Operating System : **Windows/Linux**
+- Version Control : **Git (recommended)**
+- Javascript Context : **NodeJS (v14.x)**
+- Package Manager : **Yarn**
+
+## Quickstart
+
+> You need to copy the project from Github before
 
 ```bash
-# Clone ssh repository and move on
-$ git clone git@github.com:beehavior-bts/webapp.git
-$ cd webapp
-
-# Synchronize
-$ git fetch
-
-# Swap to 'raph' branch
-$ git checkout raph
-
-# Install dependencies
-$ yarn install
-
-# Run for test
-$ yarn dev
+(Beehavior) $ git clone https://github.com/beehavior-bts/webapp
+(Beehavior) $ cd webapp
+(Beehavior/webapp) $ yarn install
 ```
 
-## Special Directories
+### Run for development
+
+```bash
+(Beehavior/webapp) $ yarn run dev
+```
+
+> See the **nuxt.config.js** for more configuration and nuxt website **https://nuxtjs.org/docs/configuration-glossary/configuration-server/**
+
+### Build for production
+
+```bash
+(Beehavior/webapp) $ yarn run generate
+```
+
+> This command compile the website in **dist** directory
+> You can copy the content of **dist** directory and put in apache server for example
+
+## Info about project directories
 
 You can create the following extra directories, some of which have special behaviors. Only `pages` is required; you can delete them if you don't want to use their functionality.
 
@@ -87,3 +118,17 @@ More information about the usage of this directory in [the documentation](https:
 This directory contains your Vuex store files. Creating a file in this directory automatically activates Vuex.
 
 More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/store).
+
+## License
+
+> Specifically, it grants any person who obtains a copy of the software and associated files the right to use, copy, modify, merge, distribute, publish, sublicense, and sell copies of the software. The only condition required to use the software is to include the same copyright notice in all copies or any substantial portions of the software. The final portion of the text provides for limitations and revokes any warranty implied by sharing the code.
+
+MIT License
+
+Copyright 2022 Raphaël Carrilho - Estéban Ristich - Baptiste Roussel
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
